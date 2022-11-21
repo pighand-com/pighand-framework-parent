@@ -5,7 +5,7 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.pighand</groupId>
-    <artifactId>pighand-framework-parent</artifactId>
+    <artifactId>pighand-framework-spring-parent</artifactId>
     <version>1.0.0</version>
 
     <packaging>pom</packaging>
@@ -13,8 +13,8 @@
     <description>集成pighand-framework、spring boot相关配置</description>
 
     <scm>
-        <url>https://github.com/pighand-com/pighand-framework-parent</url>
-        <connection>scm:git:https://git@github.com/pighand-com/pighand-framework-parent.git</connection>
+        <url>https://github.com/pighand-com/pighand-framework-spring-parent</url>
+        <connection>scm:git:https://git@github.com/pighand-com/pighand-framework-spring-parent.git</connection>
     </scm>
 
     <licenses>
