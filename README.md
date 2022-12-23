@@ -1,4 +1,4 @@
-# fastjava-parent
+# pighand-framework-spring-parent
 
 不需要引用spring boot、pighand-framework-spring，已集成大部分包。
 
