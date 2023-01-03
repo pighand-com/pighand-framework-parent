@@ -10,11 +10,13 @@
 
     <packaging>pom</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
-    <description>集成pighand-framework、spring boot相关配置</description>
+    <description>集成pighand-framework-spring、spring boot相关配置</description>
+    <url>https://github.com/pighand-com/pighand-framework-spring-parent</url>
 
     <scm>
         <url>https://github.com/pighand-com/pighand-framework-spring-parent</url>
-        <connection>scm:git:https://git@github.com/pighand-com/pighand-framework-spring-parent.git</connection>
+        <connection>https://github.com/pighand-com/pighand-framework-spring-parent</connection>
+        <developerConnection>https://github.com/pighand-com/pighand-framework-spring-parent</developerConnection>
     </scm>
 
     <licenses>
@@ -42,13 +44,14 @@
         <lombok.version>1.18.24</lombok.version>
         <springdoc.version>1.6.14</springdoc.version>
         <mybatis-ehcache.version>1.2.3</mybatis-ehcache.version>
-        <pighand-framework.version>1.0.0</pighand-framework.version>
+        <pighand-framework-spring.version>1.0.0</pighand-framework-spring.version>
         <mysql-connector-java.version>8.0.30</mysql-connector-java.version>
         <druid-spring-boot-starte.version>1.2.15</druid-spring-boot-starte.version>
         <mybatis-plus-boot-starter.version>3.5.2</mybatis-plus-boot-starter.version>
 
         <!-- plugins -->
         <spring-boot-maven-plugin>2.7.0</spring-boot-maven-plugin>
+        <maven-gpg-plugin.version>3.0.1</maven-gpg-plugin.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <dockerfile-maven-plugin.version>1.4.3</dockerfile-maven-plugin.version>
     </properties>
@@ -64,8 +67,8 @@
         <!-- pighand-framework -->
         <dependency>
             <groupId>com.pighand</groupId>
-            <artifactId>pighand-framework</artifactId>
-            <version>${pighand-framework.version}</version>
+            <artifactId>pighand-framework-spring</artifactId>
+            <version>${pighand-framework-spring.version}</version>
         </dependency>
 
         <!-- spring boot -->
@@ -201,4 +204,45 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>sonatype</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+        <snapshotRepository>
+            <id>sonatype</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-gpg-plugin</artifactId>
+                        <version>${maven-gpg-plugin.version}</version>
+                        <executions>
+                            <execution>
+                                <id>sign-artifacts</id>
+                                <phase>verify</phase>
+                                <goals>
+                                    <goal>sign</goal>
+                                </goals>
+                                <configuration>
+                                    <gpgArguments>
+                                        <arg>--pinentry-mode</arg>
+                                        <arg>loopback</arg>
+                                    </gpgArguments>
+                                </configuration>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 </project>
