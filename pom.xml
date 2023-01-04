@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.pighand</groupId>
     <artifactId>pighand-framework-spring-parent</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 
     <packaging>pom</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
@@ -40,16 +40,14 @@
         <jdk.version>17</jdk.version>
 
         <!-- dependencies -->
-        <spring-boot.version>3.0.1</spring-boot.version>
-
         <guava.version>31.1-jre</guava.version>
         <lombok.version>1.18.24</lombok.version>
         <springdoc.version>1.6.14</springdoc.version>
         <mybatis-ehcache.version>1.2.3</mybatis-ehcache.version>
-        <pighand-framework-spring.version>1.0.0</pighand-framework-spring.version>
+        <pighand-framework-spring.version>1.0.1</pighand-framework-spring.version>
         <mysql-connector-java.version>8.0.30</mysql-connector-java.version>
         <druid-spring-boot-starte.version>1.2.15</druid-spring-boot-starte.version>
-        <mybatis-plus-boot-starter.version>3.5.2</mybatis-plus-boot-starter.version>
+        <mybatis-plus-boot-starter.version>3.5.3.1</mybatis-plus-boot-starter.version>
 
         <!-- plugins -->
         <spring-boot-maven-plugin>2.7.0</spring-boot-maven-plugin>
@@ -99,16 +97,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>${spring-boot.version}</version>
         </dependency>
 
         <!-- database -->
