@@ -10,6 +10,6 @@
 <parent>
     <groupId>com.pighand</groupId>
     <artifactId>pighand-framework-spring-parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </parent>
 ```
