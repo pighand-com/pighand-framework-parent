@@ -44,7 +44,6 @@
         <pighand-framework-spring-api.version>1.2.0</pighand-framework-spring-api.version>
 
         <!-- dependencies -->
-        <gson.version>2.10.1</gson.version>
         <guava.version>31.1-jre</guava.version>
         <lombok.version>1.18.24</lombok.version>
         <grpc-all.version>1.54.0</grpc-all.version>
@@ -221,11 +220,6 @@
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>${gson.version}</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
