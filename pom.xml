@@ -40,8 +40,8 @@
         <jdk.version>17</jdk.version>
 
         <!-- pighand-framework-spring -->
-        <pighand-framework-spring.version>2.0.0-bate.1.20231121</pighand-framework-spring.version>
-        <pighand-framework-spring-api.version>2.0.0-bate.1.20231121</pighand-framework-spring-api.version>
+        <pighand-framework-spring.version>2.0.0-bate.1.20231210</pighand-framework-spring.version>
+        <pighand-framework-spring-api.version>2.0.0-bate.1.20231210</pighand-framework-spring-api.version>
 
         <!-- dependencies -->
         <guava.version>31.1-jre</guava.version>
