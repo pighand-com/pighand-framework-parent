@@ -40,7 +40,7 @@
         <jdk.version>17</jdk.version>
 
         <!-- pighand-framework-spring -->
-        <pighand-framework-spring.version>2.0.0-bate.1.20240517</pighand-framework-spring.version>
+        <pighand-framework-spring.version>2.0.0-bate.1.20240527</pighand-framework-spring.version>
         <pighand-framework-spring-api.version>2.0.0-bate.1.20240517</pighand-framework-spring-api.version>
 
         <!-- dependencies -->
