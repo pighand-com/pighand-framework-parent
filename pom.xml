@@ -6,7 +6,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.pighand</groupId>
     <artifactId>pighand-framework-spring-parent</artifactId>
-    <version>2.0.0-bate.1.20240606</version>
+    <version>2.0.0-bate.1.20240611</version>
 
     <packaging>pom</packaging>
     <name>${project.groupId}:${project.artifactId}</name>
@@ -40,7 +40,7 @@
         <jdk.version>17</jdk.version>
 
         <!-- pighand-framework-spring -->
-        <pighand-framework-spring.version>2.0.0-bate.1.20240604</pighand-framework-spring.version>
+        <pighand-framework-spring.version>2.0.0-bate.1.20240611</pighand-framework-spring.version>
         <pighand-framework-spring-api.version>2.0.0-bate.1.20240517</pighand-framework-spring-api.version>
 
         <!-- dependencies -->
