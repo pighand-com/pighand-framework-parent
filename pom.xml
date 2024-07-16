@@ -37,7 +37,10 @@
 
     <properties>
         <encoding>UTF-8</encoding>
-        <jdk.version>17</jdk.version>
+        <jdk.version>21</jdk.version>
+
+        <!-- Default GC -->
+        <GC>-XX:+UseZGC</GC>
 
         <!-- pighand-framework-spring -->
         <pighand-framework-spring.version>2.0.0-bate.2.20240713</pighand-framework-spring.version>
@@ -53,7 +56,7 @@
         <mybatis-flex.version>1.9.3</mybatis-flex.version>
         <reactor-netty.version>1.1.21</reactor-netty.version>
         <mybatis-ehcache.version>1.2.3</mybatis-ehcache.version>
-        <log4j-slf4j-impl.version>2.23.1</log4j-slf4j-impl.version>
+        <log4j-slf4j2-impl.version>2.23.1</log4j-slf4j2-impl.version>
         <mysql-connector-java.version>8.0.33</mysql-connector-java.version>
         <hibernate-validator.version>8.0.1.Final</hibernate-validator.version>
         <jakarta.validation-api.version>3.1.0</jakarta.validation-api.version>
@@ -174,8 +177,8 @@
         <!-- log -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
-            <version>${log4j-slf4j-impl.version}</version>
+            <artifactId>log4j-slf4j2-impl</artifactId>
+            <version>${log4j-slf4j2-impl.version}</version>
         </dependency>
 
         <!-- database -->
@@ -250,16 +253,18 @@
         <sourceDirectory>src/main/java</sourceDirectory>
 
         <plugins>
+            <!-- running the application -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring-boot-maven-plugin}</version>
                 <configuration>
                     <fork>true</fork>
-                    <jvmArguments>-Dfile.encoding=${encoding}</jvmArguments>
+                    <jvmArguments>-Dfile.encoding=${encoding} ${GC}</jvmArguments>
                 </configuration>
             </plugin>
 
+            <!-- compiler -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -268,6 +273,7 @@
                     <source>${jdk.version}</source>
                     <target>${jdk.version}</target>
                     <encoding>${encoding}</encoding>
+
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
