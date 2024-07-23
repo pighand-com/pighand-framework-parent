@@ -54,7 +54,6 @@
         <springdoc.version>2.3.0</springdoc.version>
         <mapstruct.version>1.5.5.Final</mapstruct.version>
         <mybatis-flex.version>1.9.3</mybatis-flex.version>
-        <reactor-netty.version>1.1.21</reactor-netty.version>
         <mybatis-ehcache.version>1.2.3</mybatis-ehcache.version>
         <log4j-slf4j2-impl.version>2.23.1</log4j-slf4j2-impl.version>
         <mysql-connector-java.version>8.0.33</mysql-connector-java.version>
@@ -162,16 +161,6 @@
             <groupId>io.grpc</groupId>
             <artifactId>grpc-all</artifactId>
             <version>${grpc-all.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.projectreactor.netty</groupId>
-            <artifactId>reactor-netty</artifactId>
-            <version>${reactor-netty.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>io.netty</groupId>
-            <artifactId>netty-all</artifactId>
-            <version>4.1.111.Final</version>
         </dependency>
 
         <!-- log -->
